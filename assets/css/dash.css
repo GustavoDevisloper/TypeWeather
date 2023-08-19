@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&display=swap');
+body{
+    display: flex;
+    width: 1366px;
+    height: 768px;
+    padding: 24px;
+    justify-content: center;
+    align-items: center;
+    background: var(--base-gray-900, #13131A);
+    overflow: hidden;
+}
+.logo{
+    position: absolute;
+    top: 15px;
+    right: 90%;
+    display: flex;
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--base-gray-600, #1E1E29);
+}
+.search{
+    position: absolute;
+    top: 28px;
+    right: 48%;
+    display: flex;
+    width: 534px;
+    height: 56px;
+    padding: 0px 12px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: 8px;
+    background: var(--base-gray-600, #1E1E29);
+}
+.search h3{
+    color: var(--base-gray-400, #7F7F98);
+
+    /* Text md */
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+}
+.card {
+    position: absolute;
+    top: 4px;
+    left: 35px;
+    display: flex;
+    height: 610px;
+    width: 665px;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 12px;
+    background: var(--base-gray-800, #16161F);
+}
+.image {
+    position: relative; /* Necessário para posicionar corretamente o h3 */
+    display: flex;
+    width: 632px;
+    height: 516px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .image img {
+    position: relative;
+    top: 50px;
+    right: 335px;
+    top: -10%;
+    width: 700px;
+    height: 105%;
+    border-radius: 2%;
+  }
+
+  .image h3 {
+    position: absolute;
+    top: -8%; /* Ajuste a posição vertical conforme necessário */
+    right: 780px;
+    margin: 0 auto;
+    color: var(--base-gray-100, #FAFAFA);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 28px */
+    white-space: nowrap;
+  }
+  .image p{
+    position: absolute;
+    top: -5%; /* Ajuste a posição vertical conforme necessário */
+    right: 685px;
+    color: var(--base-gray-100, #FAFAFA);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+    white-space: nowrap;
+  }
+.image .hour{
+    position: absolute;
+    top: -10%;
+    left: 230px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+.image .temperature{
+    position: absolute;
+    top: 60%;
+    right: 750px;
+    color: var(--base-white, #FFF);
+    font-family: Nunito;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%; /* 96px */
+}
+.image .temperature-2{
+    color: var(--base-white, #FFF);
+    position: absolute;
+    top: 75%;
+    right: 840px;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 28px */
+}
+.image svg{
+    position: absolute;
+    top: 81%;
+    left: -30%;
+}
+.image .clouds{
+    color: var(--base-white, #FFF);
+    top: 75%;
+    left: -27%;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 28px */
+}
+.image svg{
+    position: absolute;
+    top: 245px;
+    left: 50px;
+}
+.weather-detail{
+    position: absolute;
+    top: 4px;
+    left: 760px;
+    width: 510px;
+    height: 398px;
+    display: inline-flex;
+    padding: 28px 24px 8px 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 12px;
+    background: var(--base-gray-800, #16161F);
+}
+.weather-detail h3{
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    color: var(--base-gray-400, #7F7F98);
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+.weather-detail svg {
+    position: absolute;
+    top: 75px;
+    left: 20px;
+}
+.weather-detail .sensation{
+    position: absolute;
+    top: 67px;
+    left: 55px;
+    color: var(--base-gray-200, #BFBFD4);
+    text-align: center;
+    
+    /* Heading xs */
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 19.6px */
+}
+.weather-detail .degrees{
+    position: absolute;
+    top: 65px;
+    left: 490px;
+    color: var(--base-gray-100, #FAFAFA);
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+}
+.bar{
+    position: absolute;
+    top: 130px;
+    width: 524px;
+    height: 2px;
+    flex-shrink: 0;
+    background: #2d2d36;
+    border-radius: 1%;
+}
+.weather-detail .cloud{
+    position: absolute;
+    top: 155px;
+}
+.weather-detail .rain{
+    position: absolute;
+    top: 150px;
+    left: 60px;
+    color: var(--base-gray-200, #BFBFD4);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+}
+.weather-detail .porcent{
+    position: absolute;
+    top: 140px;
+    left: 490px;
+    color: var(--base-gray-100, #FAFAFA);
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+}
+.bar-1 {
+    position: absolute;
+    top: 215px;
+    width: 524px;
+    height: 2px;
+    flex-shrink: 0;
+    background: #2d2d36;
+    border-radius: 1%;
+}
+.weather-detail .wind{
+    position: absolute;
+    top: 245px;
+}
+.weather-detail .wind-text{
+    position: absolute;
+    top: 240px;
+    left: 60px;
+    color: var(--base-gray-200, #BFBFD4);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+}
+.weather-detail .KM{
+    position: absolute;
+    top: 230px;
+    left: 480px;
+    color: var(--base-gray-100, #FAFAFA);
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+.bar-2 {
+    position: absolute;
+    top: 315px;
+    width: 524px;
+    height: 2px;
+    flex-shrink: 0;
+    background: #2d2d36;
+    border-radius: 1%;
+}
+.weather-detail .moisture{
+    position: absolute;
+    top: 345px;
+}
+.weather-detail .air{
+    position: absolute;
+    top: 337px;
+    left: 60px;
+    color: var(--base-gray-200, #BFBFD4);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+.weather-detail .porcent-1{
+    position: absolute;
+    top: 330px;
+    left: 480px;
+    color: var(--base-gray-100, #FAFAFA);
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+}
+.next-days {
+    position: absolute;
+    top: 450px;
+    left: 760px;
+    width: 510px;
+    height: 156px;
+    display: inline-flex;
+    padding: 28px 24px 8px 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 12px;
+    background: var(--base-gray-800, #16161F);
+}
+.next-days h3{
+    position: absolute;
+    top: 8px;
+    color: var(--base-gray-400, #7F7F98);
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+}
+.next-days .Monday{
+    position: absolute;
+    padding: 20px;
+    left: 5px;
+    top: 30px;
+    color: var(--base-gray-200, #BFBFD4);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+}
+.next-days img{
+    position: absolute;
+    top: 40px;
+    left: -5px;
+}
+.next-days .temporal{
+    position: absolute;
+    top: 122px;
+    left: 40px;
+    color: var(--base-gray-200, #BFBFD4);
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+.next-days .degrees-1{
+    position: absolute;
+    top: 145px;
+    left: 40px;
+    color: var(--base-gray-100, #FAFAFA);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+.highlight {
+    color: #7F7F98; /* Defina a cor desejada aqui */
+  }
+.next-days .Tuesday{
+    position: absolute;
+    padding: 20px;
+    left: 135px;
+    top: 30px;
+    color: var(--base-gray-200, #BFBFD4);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+}
+.next-days .Wednesday{
+    position: absolute;
+    padding: 20px;
+    left: 235px;
+    top: 30px;
+    color: var(--base-gray-200, #BFBFD4);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+}
+.next-days .Thursday{
+    position: absolute;
+    padding: 20px;
+    left: 335px;
+    top: 30px;
+    color: var(--base-gray-200, #BFBFD4);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+}
+.next-days .Friday{
+    position: absolute;
+    padding: 20px;
+    left: 435px;
+    top: 30px;
+    color: var(--base-gray-200, #BFBFD4);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;   
+}
+.next-days .rain-2{
+    position: absolute;
+    top: 75px;
+    left: 155px;
+}
+.next-days .few-clouds{
+    position: absolute;
+    top: 75px;
+    left: 255px;
+}
+.next-days .overcast{
+    position: absolute;
+    top: 75px;
+    left: 355px;
+}
+.next-days .sun{
+    position: absolute;
+    top: 75px;
+    left: 455px;
+}
+.next-days .rain-3{
+    position: absolute;
+    top: 122px;
+    left: 155px;
+    color: var(--base-gray-200, #BFBFD4);
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+}
+.next-days .few-clouds-2{
+    position: absolute;
+    top: 122px;
+    left: 235px;
+    color: var(--base-gray-200, #BFBFD4);
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;     
+}
+.next-days .overcast-2{
+    position: absolute;
+    top: 122px;
+    left: 365px;
+    color: var(--base-gray-200, #BFBFD4);
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+}
+.next-days .sun-2{
+    position: absolute;
+    top: 122px;
+    left: 455px;
+    color: var(--base-gray-200, #BFBFD4);
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+}
+.next-days .rain-4{
+    position: absolute;
+    top: 145px;
+    left: 145px;
+    color: var(--base-gray-100, #FAFAFA);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+.next-days .few-clouds-3{
+    position: absolute;
+    top: 145px;
+    left: 245px;
+    color: var(--base-gray-100, #FAFAFA);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+.next-days .overcast-3{
+    position: absolute;
+    top: 145px;
+    left: 360px;
+    color: var(--base-gray-100, #FAFAFA);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
+.next-days .sun-3{
+    position: absolute;
+    top: 145px;
+    left: 460px;
+    color: var(--base-gray-100, #FAFAFA);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+}
